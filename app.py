@@ -141,8 +141,8 @@ with st.sidebar:
     lookback = st.slider("Lookback (jours)", 30, 180, 90, step=10)
 
     st.markdown("**Sources de données**")
-    use_news = st.checkbox("📰 News financières", value=True)
-    use_reddit = st.checkbox("🤖 Reddit WSB", value=True)
+    use_news = st.checkbox("News financières", value=True)
+    use_reddit = st.checkbox("Reddit WSB", value=True)
 
     signal_threshold = st.slider("Seuil signal sentiment", 0.0, 1.0, 0.6, step=0.05,
                                   help="Score min pour déclencher un signal BUY/SELL")
@@ -235,7 +235,7 @@ if run:
     st.markdown("<br>", unsafe_allow_html=True)
 
     # ── Charts ────────────────────────────────────────────────────────────────
-    tab1, tab2, tab3 = st.tabs(["📈 Prix & Signaux", "🧠 Sentiment", "⚙️ Backtest"])
+    tab1, tab2, tab3 = st.tabs(["Prix & Signaux", "Sentiment", "Backtest"])
 
     PLOTLY_LAYOUT = dict(
         paper_bgcolor='rgba(0,0,0,0)',
