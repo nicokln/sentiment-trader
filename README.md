@@ -1,11 +1,11 @@
-# 📡 SentimentEdge — NLP Trading Signal Dashboard
+# SentimentEdge — NLP Trading Signal Dashboard
 
 Projet de gestion de portefeuille combinant **NLP (FinBERT)** et données de marché
 pour générer des signaux de trading sur les actions du S&P 500.
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 sentiment_trader/
@@ -29,7 +29,7 @@ sentiment_trader/
 
 ---
 
-## ⚡ Installation
+## Installation
 
 ### 1. Cloner / créer le projet
 
@@ -49,7 +49,7 @@ venv\Scripts\activate           # Windows
 pip install -r requirements.txt
 ```
 
-> 💡 Le premier lancement téléchargera le modèle **FinBERT** (~440 MB).  
+> Le premier lancement téléchargera le modèle **FinBERT** (~440 MB).  
 > Il est ensuite mis en cache automatiquement par HuggingFace.
 
 ### 3. Variables d'environnement
@@ -69,7 +69,7 @@ export $(cat .env | xargs)
 Get-Content .env | ForEach-Object { $k,$v = $_ -split '=',2; [Environment]::SetEnvironmentVariable($k,$v) }
 ```
 
-#### 🔑 Obtenir les clés API (optionnel)
+#### Obtenir les clés API (optionnel)
 
 | Service | URL | Plan gratuit |
 |---------|-----|--------------|
@@ -89,7 +89,7 @@ Ouvre [http://localhost:8501](http://localhost:8501) dans ton navigateur.
 
 ---
 
-## 🧠 Logique du Modèle
+## Logique du Modèle
 
 ### 1. Collecte des données textuelles
 - **NewsAPI** : articles financiers contenant le ticker (ex: "AAPL")
@@ -126,7 +126,7 @@ Filtre anti-surtrading : pas de signal identique deux jours consécutifs.
 
 ---
 
-## 💡 Pistes d'amélioration (pour aller plus loin)
+## Pistes d'amélioration (pour aller plus loin)
 
 1. **Sentiment intraday** : intégrer des données tick-by-tick
 2. **Multi-actifs** : construire un portfolio basé sur les signaux croisés
@@ -136,7 +136,7 @@ Filtre anti-surtrading : pas de signal identique deux jours consécutifs.
 
 ---
 
-## 📚 Références
+## Références
 
 - [FinBERT Paper](https://arxiv.org/abs/1908.10063)
 - [ProsusAI/finbert (HuggingFace)](https://huggingface.co/ProsusAI/finbert)
